@@ -26,7 +26,6 @@ import org.springframework.stereotype.Component;
  * @author Jacky.gao
  * @since 2017年12月11日
  */
-@Component("ureport.httpImageProvider")
 public class HttpImageProvider implements ImageProvider {
 
     @Override
