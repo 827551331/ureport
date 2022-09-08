@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -28,6 +29,7 @@ public class UrReportInfo implements Serializable {
     private Long id;
 
     @ApiModelProperty("租户信息")
+    @NotBlank(message = "租户信息不能为空")
     private String hireCode;
 
     @ApiModelProperty("创建时间")
@@ -37,12 +39,15 @@ public class UrReportInfo implements Serializable {
     private LocalDateTime updateDate;
 
     @ApiModelProperty("报表名称")
+    @NotBlank(message = "报表名称不能为空")
     private String reportName;
 
     @ApiModelProperty("创建人员")
+    @NotBlank(message = "创建人员不能为空")
     private String createPer;
 
     @ApiModelProperty("报表文件")
+    @NotBlank(message = "报表文件不能为空")
     private String reportFile;
 
     @ApiModelProperty("报表类型")
